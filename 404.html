@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>404 - Page Not Found | Divshaan Singh Brar</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --px-black: #0f0f1b;
+            --px-dark: #1a1a2e;
+            --px-mid: #25253e;
+            --px-border: #3a3a5c;
+            --px-cyan: #5dade2;
+            --px-green: #2ecc71;
+            --px-lime: #a8ff00;
+            --px-yellow: #f1c40f;
+            --px-orange: #e67e22;
+            --px-red: #e74c3c;
+            --px-magenta: #e056a0;
+            --px-purple: #9b59b6;
+            --px-white: #ecf0f1;
+            --px-gray: #7f8c8d;
+            --font-pixel: 'Press Start 2P', monospace;
+            --font-silk: 'Silkscreen', monospace;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .error-main {
+            padding-top: 100px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 404 Title */
+        .error-title-block {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .glitch-404 {
+            font-size: 5rem;
+            color: var(--px-red);
+            text-shadow:
+                3px 3px 0 var(--px-dark),
+                -2px 0 var(--px-cyan),
+                2px 0 var(--px-magenta);
+            animation: glitch404 3s infinite steps(1);
+            position: relative;
+            display: inline-block;
+        }
+
+        @keyframes glitch404 {
+            0%, 90%, 100% { text-shadow: 3px 3px 0 var(--px-dark), -2px 0 var(--px-cyan), 2px 0 var(--px-magenta); transform: translate(0); }
+            91% { text-shadow: 3px 3px 0 var(--px-dark), -4px 0 var(--px-cyan), 4px 0 var(--px-magenta); transform: translate(-2px, 1px); }
+            93% { text-shadow: 3px 3px 0 var(--px-dark), 3px 0 var(--px-cyan), -3px 0 var(--px-magenta); transform: translate(2px, -1px); }
+            95% { text-shadow: 3px 3px 0 var(--px-dark), -2px 0 var(--px-cyan), 2px 0 var(--px-magenta); transform: translate(0); }
+        }
+
+        .error-subtitle {
+            font-size: 0.55rem;
+            color: var(--px-gray);
+            margin-top: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .error-flavor {
+            font-family: var(--font-silk);
+            font-size: 0.6rem;
+            color: var(--px-yellow);
+            margin-top: 8px;
+        }
+
+        /* ===== GAME CABINET — shared arcade styles live in style.css ===== */
+
+        /* Back button */
+        .back-section {
+            text-align: center;
+            margin-top: 24px;
+            margin-bottom: 40px;
+        }
+
+        .pixel-btn {
+            display: inline-block;
+            font-family: var(--font-pixel);
+            font-size: 0.5rem;
+            color: var(--px-black);
+            background: var(--px-cyan);
+            border: none;
+            border-bottom: 4px solid #2c81ba;
+            padding: 10px 24px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.1s;
+            letter-spacing: 0.05em;
+        }
+
+        .pixel-btn:hover {
+            background: var(--px-yellow);
+            border-bottom-color: #c9a20e;
+            color: var(--px-black);
+        }
+
+        .pixel-btn:active {
+            border-bottom-width: 2px;
+            transform: translateY(2px);
+        }
+
+
+        /* Power LED */
+        .power-led {
+            position: fixed;
+            bottom: 12px; right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 100;
+        }
+
+        .led-dot {
+            width: 5px; height: 5px;
+            background: var(--px-green);
+            box-shadow: 0 0 6px var(--px-green);
+            animation: ledBlink 3s step-end infinite;
+        }
+
+        .led-text {
+            font-size: 0.25rem;
+            color: var(--px-gray);
+            letter-spacing: 0.1em;
+        }
+
+        @keyframes ledBlink {
+            0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+        }
+
+        @keyframes screenOn {
+            0% { opacity: 0; } 5% { opacity: 0.8; } 10% { opacity: 0.2; } 20% { opacity: 1; }
+        }
+
+        body > *:not(body::before):not(body::after) {
+            animation: screenOn 0.5s steps(4) forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .glitch-404 { font-size: 3rem; }
+            .pixel-nav a { margin-left: 12px; font-size: 0.38rem; }
+            .power-led { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .glitch-404 { font-size: 2.2rem; }
+            .pixel-header { flex-direction: column; gap: 8px; padding: 10px; }
+            .pixel-nav a { margin-left: 10px; }
+            .error-main { padding-top: 120px; }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--px-black); }
+        ::-webkit-scrollbar-thumb { background: var(--px-border); }
+        ::-webkit-scrollbar-thumb:hover { background: var(--px-cyan); }
+    </style>
+</head>
+<body>
+
+    <!-- Power LED -->
+    <div class="power-led">
+        <div class="led-dot"></div>
+        <span class="led-text">POWER</span>
+    </div>
+
+<div class="hud">
+  <button class="burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">≡</button>
+  <img src="assets/logo.svg" alt="" class="logo" aria-hidden="true">
+  <span class="dot"></span><span>DESIGNER_OS_V1.0</span>
+  <span class="sep">//</span><span>404_ERROR.EXE</span>
+  <span class="sep">//</span><span style="color:var(--hot)">SYSTEM FAILURE</span>
+  <span class="r" id="clk">00:00:00</span>
+</div>
+
+<nav class="side">
+  <h3>&gt; NAVIGATION</h3>
+  <a href="index.html">[01] HOME</a>
+  <a href="portfolio.html">[02] PORTFOLIO</a>
+  <a href="about.html">[03] ABOUT</a>
+  <a href="contact.html">[04] CONTACT</a>
+  <div class="stat" style="color:var(--hot)">USER: DSB<br>STATUS: OFFLINE<br>ERR: ZONE_404<br>HP: CRITICAL</div>
+</nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="navDrawerLabel">&gt; NAVIGATION</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="index.html">[01] HOME</a>
+    <a href="portfolio.html">[02] PORTFOLIO</a>
+    <a href="about.html">[03] ABOUT</a>
+    <a href="contact.html">[04] CONTACT</a>
+  </div>
+</div>
+
+<main class="main" style="padding-top:20px;display:flex;flex-direction:column;align-items:center;">
+        <div class="container">
+            <!-- 404 Title -->
+            <div class="error-title-block">
+                <div class="glitch-404">404</div>
+                <p class="error-subtitle">PAGE NOT FOUND</p>
+                <p class="error-flavor">You've wandered into the void. Fight your way back.</p>
+            </div>
+
+            <!-- Arcade Cabinet -->
+            <div class="arcade-cabinet">
+                <div class="game-bezel">
+                    <!-- HUD -->
+                    <div class="game-hud">
+                        <div class="hud-item">
+                            <span class="hud-label">SCORE</span>
+                            <span class="hud-val hud-val-score" id="hud-score">0000</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-lives" id="hud-lives">♥ ♥ ♥</span>
+                        </div>
+                        <div class="hud-item">
+                            <span class="hud-label">HI</span>
+                            <span class="hud-val hud-val-hi" id="hud-hi">0000</span>
+                        </div>
+                    </div>
+
+                    <!-- Game Canvas -->
+                    <canvas id="game-canvas" width="552" height="400"></canvas>
+
+                    <!-- Keyboard Controls -->
+                    <div class="controls-bar">
+                        <div class="ctrl-group">
+                            <span class="ctrl-key">←</span>
+                            <span class="ctrl-key">→</span>
+                            <span class="ctrl-label">MOVE</span>
+                        </div>
+                        <div class="ctrl-group">
+                            <span class="ctrl-key">SPACE</span>
+                            <span class="ctrl-label">FIRE</span>
+                        </div>
+                        <div class="ctrl-group">
+                            <span class="ctrl-key">P</span>
+                            <span class="ctrl-label">PAUSE</span>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Touch Controls -->
+                    <div class="touch-controls">
+                        <button class="touch-btn" id="btn-left">◀</button>
+                        <button class="touch-btn touch-btn-fire" id="btn-fire">FIRE</button>
+                        <button class="touch-btn" id="btn-right">▶</button>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+  <div class="foot" style="width:100%;max-width:560px;">
+    <a href="index.html">◄ REBOOT_SYSTEM</a>
+    <a href="#" onclick="alert('→ DANGER ZONE CLEARED');return false;">FIGHT_ON ►</a>
+  </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="invaders.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<title>DESIGNER_OS_V1.0 // CONTACT.EXE</title>
+<meta name="description" content="Contact Divshaan Singh Brar — graphic designer & art director. Brampton, ON. Open to work.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hud">
+  <button class="burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">≡</button>
+  <img src="assets/logo.svg" alt="" class="logo" aria-hidden="true">
+  <span class="dot"></span><span>DESIGNER_OS_V1.0</span>
+  <span class="sep">//</span><span>CONTACT.EXE</span>
+  <span class="sep">//</span><span style="color:var(--yl)">TX CHANNEL OPEN</span>
+  <span class="r" id="clk">00:00:00</span>
+</div>
+
+<nav class="side">
+  <h3>&gt; NAVIGATION</h3>
+  <a href="index.html">[01] HOME</a>
+  <a href="portfolio.html">[02] PORTFOLIO</a>
+  <a href="about.html">[03] ABOUT</a>
+  <a href="contact.html" class="active">[04] CONTACT</a>
+  <div class="stat">USER: DSB<br>STATUS: ONLINE<br>SIGNAL: ●●●●●<br>PING: 12ms</div>
+</nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="navDrawerLabel">&gt; NAVIGATION</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="index.html">[01] HOME</a>
+    <a href="portfolio.html">[02] PORTFOLIO</a>
+    <a href="about.html">[03] ABOUT</a>
+    <a href="contact.html" class="active">[04] CONTACT</a>
+  </div>
+</div>
+
+<main class="main">
+  <h1 class="title">CONTACT.EXE</h1>
+  <p class="sub">&gt; TRANSMIT.DAT &nbsp;•&nbsp; <b>OPEN CHANNEL</b> &nbsp;•&nbsp; RESPONSE TIME ~24H</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>TRANSMIT_MSG.FRM <span>[NEW]</span></h2>
+      <form id="frm" novalidate>
+        <div class="fld">
+          <label for="nm">&gt; SENDER_NAME <b>*</b></label>
+          <input type="text" id="nm" class="form-control" required placeholder="your full name" autocomplete="name">
+        </div>
+        <div class="fld">
+          <label for="em">&gt; RETURN_ADDR <b>*</b></label>
+          <input type="email" id="em" class="form-control" required placeholder="you@domain.com" autocomplete="email">
+        </div>
+        <div class="fld">
+          <label for="tp">&gt; MSG_TYPE</label>
+          <select id="tp" class="form-select">
+            <option>&gt; FULL-TIME ROLE</option>
+            <option>&gt; FREELANCE PROJECT</option>
+            <option>&gt; COLLABORATION</option>
+            <option>&gt; SAY HI</option>
+            <option>&gt; OTHER</option>
+          </select>
+        </div>
+        <div class="fld">
+          <label for="ms">&gt; PAYLOAD <b>*</b></label>
+          <textarea id="ms" class="form-control" required placeholder="type your message here..." maxlength="1000"></textarea>
+          <span class="ch"><span id="cc">0</span> / 1000 BYTES</span>
+        </div>
+        <button type="submit" class="send btn">► TRANSMIT MESSAGE</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>CHANNELS.CFG <span>[DIRECT]</span></h2>
+      <div class="info">
+        <div class="ln"><span class="k"><i class="bi bi-envelope-fill"></i> EMAIL</span><span class="v cp" data-cp="singhbrardivshaan@gmail.com">singhbrardivshaan@gmail.com</span></div>
+        <div class="ln"><span class="k"><i class="bi bi-telephone-fill"></i> PHONE</span><span class="v cp" data-cp="4372975009">437-297-5009</span></div>
+        <div class="ln"><span class="k"><i class="bi bi-linkedin"></i> LINKEDIN</span><a class="v" href="https://www.linkedin.com/in/divshaan-singh-brar-038b97251" target="_blank" rel="noopener">@divshaan</a></div>
+        <div class="ln"><span class="k"><i class="bi bi-globe2"></i> PORTFOLIO</span><a class="v" href="https://divshaan.github.io" target="_blank" rel="noopener">divshaan.github.io</a></div>
+        <div class="ln"><span class="k"><i class="bi bi-geo-alt-fill"></i> LOCATION</span><span class="v">Brampton, ON</span></div>
+        <div class="ln"><span class="k"><i class="bi bi-clock-fill"></i> TIMEZONE</span><span class="v" id="tz">EST (UTC-5)</span></div>
+      </div>
+      <div class="ping">
+        <div><span class="b"></span>PINGING server.dsb...</div>
+        <div><span class="b" style="background:var(--yl);box-shadow:0 0 6px var(--yl)"></span>REPLY: <span style="color:var(--yl)">64 bytes in 12ms</span></div>
+        <div><span class="b" style="background:var(--cy);box-shadow:0 0 6px var(--cy)"></span>STATUS: <span style="color:var(--cy)">● OPEN TO WORK</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <a href="about.html"><i class="bi bi-chevron-double-left"></i> PREV: ABOUT</a>
+    <a href="index.html">HOME <i class="bi bi-chevron-double-right"></i></a>
+  </div>
+</main>
+
+<div class="tx" id="tx"><div class="box">
+  <div>&gt; OPENING CHANNEL...</div>
+  <div>&gt; ENCRYPTING PAYLOAD...</div>
+  <div>&gt; ROUTING TO server.dsb...</div>
+  <div>&gt; TRANSMITTING:</div>
+  <div class="bar"><div class="fl" id="txfl"></div></div>
+  <div class="done">&gt; <span style="color:var(--grn)">● MESSAGE RECEIVED</span><br>&gt; I'll reply within 24h.<br><br>&gt; <span style="color:var(--cy);cursor:pointer" data-tx-close>[CLOSE]</span></div>
+</div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body></html>

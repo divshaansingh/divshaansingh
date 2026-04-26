@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<title>DESIGNER_OS_V1.0 // PORTFOLIO.EXE</title>
+<meta name="description" content="Portfolio of Divshaan Singh Brar — 5 featured projects in brand, campaign and web design.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="hud">
+  <button class="burger" type="button" data-bs-toggle="offcanvas" data-bs-target="#navDrawer" aria-controls="navDrawer" aria-label="Open navigation">≡</button>
+  <img src="assets/logo.svg" alt="" class="logo" aria-hidden="true">
+  <span class="dot"></span><span>DESIGNER_OS_V1.0</span>
+  <span class="sep">//</span><span>PORTFOLIO.EXE</span>
+  <span class="sep">//</span><span style="color:var(--yl)">FILM_STRIP.MODE</span>
+  <span class="r" id="clk">00:00:00</span>
+</div>
+
+<div class="track"><div class="f" id="trk"></div></div>
+
+<nav class="side">
+  <h3>&gt; NAVIGATION</h3>
+  <a href="index.html">[01] HOME</a>
+  <a href="portfolio.html" class="active">[02] PORTFOLIO</a>
+  <a href="about.html">[03] ABOUT</a>
+  <a href="contact.html">[04] CONTACT</a>
+  <div class="stat">USER: DSB<br>STATUS: ONLINE<br>MODE: REEL<br>FRAMES: 5</div>
+</nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="navDrawer" aria-labelledby="navDrawerLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="navDrawerLabel">&gt; NAVIGATION</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="index.html">[01] HOME</a>
+    <a href="portfolio.html" class="active">[02] PORTFOLIO</a>
+    <a href="about.html">[03] ABOUT</a>
+    <a href="contact.html">[04] CONTACT</a>
+    <div class="stat">USER: DSB<br>MODE: REEL<br>FRAMES: 5</div>
+  </div>
+</div>
+
+<div class="hint">&gt; DRAG / SCROLL / <i class="bi bi-arrow-left"></i> <i class="bi bi-arrow-right"></i></div>
+
+<div class="stage" id="stg"><div class="strip" id="strip"></div></div>
+
+<div class="ctrl">
+  <button class="arw" id="pv" aria-label="Previous project">◄</button>
+  <div class="dots" id="dts"></div>
+  <span class="cnt"><span id="cn">01</span> / <span id="tt">05</span></span>
+  <button class="arw" id="nx" aria-label="Next project">►</button>
+</div>
+
+<div class="cs" id="cs" role="dialog" aria-modal="true" aria-labelledby="csTitle">
+  <button class="cs-close" id="csClose" type="button" aria-label="Close case study">✕ CLOSE</button>
+  <div class="cs-body" id="csBody"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body></html>
